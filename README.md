@@ -3,6 +3,7 @@ Repo for store my uiautomarot test scripts and related app
 
 # Purpose
 This repo is used to store app and test cases for my learning android automation test.
+
 ===Jan.31, 2015===
 * Research getting item(s) in list view with auto scroll the view(Done. It's `TestListView.java` for uiautomator and `TestListView.py` for appium)
 * Research getting seekBar's progress attribute in uiautomator and try to implement it in appium
