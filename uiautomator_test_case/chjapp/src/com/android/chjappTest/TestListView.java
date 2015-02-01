@@ -8,7 +8,7 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 import java.lang.InterruptedException;
 import java.lang.System;
 
-public class TestSeekBar extends UiAutomatorTestCase {
+public class TestListView extends UiAutomatorTestCase {
 
     public void testChjApp() throws UiObjectNotFoundException{
 
@@ -19,17 +19,16 @@ public class TestSeekBar extends UiAutomatorTestCase {
 
         try{
             Thread.sleep(3000);
-        } catch (InterruptedException e1){
-            e1.printStackTrace();
+        } catch (InterruptedException e){
+            e.printStackTrace();
         }
 
-        UiObject seekBarWedget = new UiObject(new UiSelector().description("seekBar_def"));
-        UiObject seekBarText = new UiObject(new UiSelector().description("text_def"));
-        // TODO: Figure out why assert won't make this case failed
-        assertEquals(seekBarText, "seekBar progress : 69");
-        // TODO: Figure out why texts below won't be printed
-        System.out.println("SeekBar Bounds:");
-        System.out.println(seekBarWedget.getBounds());
+        UiScrollable listView = new UiScrollable(new UiSelector().description("lv_def"));
+
+        UiObject test_data_15 = listView.getChildByText(
+                new UiSelector().className(android.widget.TextView. class .getName()), "test view15"
+        );
+        test_data_15.click();
 
     }
 }
