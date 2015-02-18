@@ -1,0 +1,3 @@
+[submodule "chjapp_android"]
+	path = app/chjapp
+	url = https://github.com/chenhengjie123/chjapp_android.git
